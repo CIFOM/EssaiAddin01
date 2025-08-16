@@ -29,25 +29,24 @@
         <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none;">
-        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
-        <ul class="ms-List ms-welcome__features">
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
-                <span class="ms-font-m">Achieve more with Office integration</span>
-            </li>
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
-                <span class="ms-font-m">Unlock features and functionality</span>
-            </li>
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
-                <span class="ms-font-m">Create and visualize like a pro</span>
-            </li>
-        </ul>
-        <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
-        <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-            <span class="ms-Button-label">Saluer</span>
+        <p class="ms-font-l">Exercices Word. Pressez <b>Départ</b>.</p>
+    <div id="menu-actions" style="margin-top:15px;">
+    <!-- Ligne des boutons -->
+    <div style="display:flex; align-items:center; gap:15px;">
+        <button id="depart-ex01" class="action-btn">Départ Ex01</button>
+        <span id="verif-status" style="font-size:1.5em;">❌</span>
+        <button id="verifier-ex01" class="action-btn">Vérifier Ex01</button>
+    </div>
+
+    <!-- Zone de confirmation -->
+    <div id="confirm-ex01" style="display:none; margin-top:15px; border:1px solid #ccc; padding:10px; background:#f9f9f9;">
+        <p style="margin:0 0 10px 0;">Voulez-vous effacer entièrement votre document pour commencer cet exercice ?</p>
+        <div style="display:flex; gap:10px;">
+        <button id="confirm-yes" class="confirm-btn">Oui</button>
+        <button id="confirm-no" class="confirm-btn">Non</button>
         </div>
+    </div>
+    </div>
         <p><label id="item-subject"></label></p>
     </main>
 </body>
