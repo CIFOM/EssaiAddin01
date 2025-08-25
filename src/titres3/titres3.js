@@ -50,8 +50,8 @@ export async function verifierEx01() {
     paragraphs.load("items/style");
     await context.sync();
 
-    // Styles attendus
-    const attendu = [
+    // Styles attendus Bureau
+    const attenduBureau = [
       "Titre 1", // 1
       "Normal",    // 2
       "Titre 2", // 3
@@ -59,10 +59,19 @@ export async function verifierEx01() {
       "Titre 2", // 5
       "Normal"     // 6
     ];
+    // Styles attendus Web
+    const attenduWeb = [
+      "Heading 1", // Ligne 1
+      "Normal",    // Ligne 2
+      "Heading 2", // Ligne 3
+      "Normal",    // Ligne 4
+      "Heading 2", // Ligne 5
+      "Normal"     // Ligne 6
+    ];;
 
     let ok = true;
     for (let i = 0; i < 6; i++) {
-      if (!paragraphs.items[i] || paragraphs.items[i].style !== attendu[i]) {
+      if (!paragraphs.items[i] || (paragraphs.items[i].style !== attenduBureau[i] && paragraphs.items[i].style !== attenduWeb[i])) {
         ok = false;
         break;
       }
